@@ -79,25 +79,25 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* Logo Búho Central Base */
+        /* Logo Blanco con Círculo Negro */
         .logo-box {
             width: 100px;
             height: 100px;
-            background-color: #000000;
-            border: 2px solid #ffffff;
-            border-radius: 16px;
+            background-color: #ffffff;
+            border-radius: 12px;
             margin: 0 auto 20px auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .logo-box img {
-            width: 85%;
-            height: 85%;
-            object-fit: contain;
+        .circle-icon {
+            width: 50px;
+            height: 50px;
+            border: 10px solid #000000;
+            border-radius: 50%;
+            box-sizing: border-box;
         }
 
         h1 {
@@ -167,8 +167,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: #fff;
-            padding: 2px;
+            object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.4);
         }
 
@@ -195,11 +194,6 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
-        }
-
-        .dex-header img {
-            width: 30px;
-            height: 30px;
         }
 
         .dex-desc {
@@ -243,9 +237,9 @@
 
     <!-- Tarjeta Principal -->
     <div class="card">
-        <!-- Logo Búho Central Base -->
+        <!-- Logo Blanco con Círculo Negro -->
         <div class="logo-box">
-            <img src="https://i.ibb.co/6P01x6N/owl-logo.png" alt="Central Base Owl Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3069/3069172.png'">
+            <div class="circle-icon"></div>
         </div>
         
         <h1>🌎 ¡Hola a todos, bienvenidos a Central Base 🌎</h1>
@@ -256,7 +250,7 @@
             👉🗳️ VOTAR AHORA 🗳️👈
         </a>
 
-        <!-- Sección Billeteras -->
+        <!-- Sección Billeteras de Retiro con Íconos Personalizados -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
@@ -266,7 +260,7 @@
                 <span>Binance</span>
             </div>
             <div class="wallet-item">
-                <img src="https://cryptologos.cc/logos/coinbase-coin-base-logo.png" alt="Coinbase">
+                <img src="https://assets.coingecko.com/coins/images/28003/large/coinbase-icon.png" alt="Coinbase">
                 <span>Coinbase</span>
             </div>
             <div class="wallet-item">
