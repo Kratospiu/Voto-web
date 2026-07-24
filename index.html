@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Base | Votaciones y Premios</title>
@@ -9,15 +9,13 @@
     <script src="https://pl30511242.effectivecpmnetwork.com/a9/b7/02/a9b702839ea24597d1cc165d05765a6f.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    
+    <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
         }
-
         body {
             background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.95)), 
                         url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000&auto=format&fit=crop') no-repeat center center fixed;
@@ -30,7 +28,6 @@
             padding: 20px 15px;
             position: relative;
         }
-
         .translate-container {
             margin-bottom: 15px;
             background: rgba(255, 255, 255, 0.08);
@@ -38,10 +35,8 @@
             border-radius: 20px;
             backdrop-filter: blur(5px);
         }
-
         .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0px !important; }
-
         .top-nav {
             display: flex;
             gap: 10px;
@@ -51,7 +46,6 @@
             width: 100%;
             max-width: 400px;
         }
-
         .top-btn {
             background-color: #00b4d8;
             color: #fff;
@@ -65,20 +59,6 @@
             gap: 5px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-
-        .social-icons {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .social-icons img {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            transition: transform 0.2s;
-        }
-
         .card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -91,273 +71,43 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             margin-bottom: 60px;
         }
-
-        .logo-box {
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff;
-            border-radius: 16px;
-            margin: 0 auto 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .circle-icon {
-            width: 50px;
-            height: 50px;
-            border: 10px solid #000000;
-            border-radius: 50%;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-size: 22px;
-            margin-bottom: 12px;
-            font-weight: 800;
-            line-height: 1.3;
-        }
-
-        p.subtitle {
-            font-size: 15px;
-            color: #dddddd;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .vote-notice {
-            background: rgba(0, 180, 216, 0.15);
-            border: 1px solid rgba(0, 180, 216, 0.4);
-            border-radius: 12px;
-            padding: 12px;
-            font-size: 13px;
-            color: #90e0ef;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            font-weight: 500;
-        }
-
-        .btn-vota {
+        .btn-votar {
             display: block;
-            background: linear-gradient(90deg, #0072ff, #00c6ff);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 25px 0 15px 0;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .wallets-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 25px;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border-radius: 15px;
-        }
-
-        .wallet-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-
-        .wallet-item img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: contain;
-            background: #ffffff;
-            padding: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-        }
-
-        .wallet-item span {
-            font-size: 13px;
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        .dex-box {
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 15px;
-            padding: 20px 15px;
-            margin-top: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .token-title {
-            font-size: 18px;
-            font-weight: 800;
-            color: #00c6ff;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .dex-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .dex-desc {
-            font-size: 13px;
-            color: #cccccc;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .btn-dex {
-            display: block;
-            background: linear-gradient(90deg, #00c6ff, #0072ff);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
-        }
-
-        .music-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
+            width: 100%;
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
             color: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-            z-index: 1000;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,180,216,0.4);
+        }
+        .vote-subtitle {
+            font-size: 14px;
+            color: #e0e0e0;
+            line-height: 1.5;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="translate-container">
-        <div id="google_translate_element"></div>
-    </div>
-
+    <!-- Navegación superior -->
     <div class="top-nav">
-        <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">🚀 FutureX</a>
-        <a href="https://t.me/CentralBasse" target="_blank" class="top-btn">💬 Telegram</a>
-        <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">📈 DEXScreener</a>
+        <a href="https://t.me" target="_blank" class="top-btn">Telegram</a>
+        <a href="https://dexscreener.com" target="_blank" class="top-btn">DEXScreener</a>
     </div>
 
-    <div class="social-icons">
-        <a href="https://chat.whatsapp.com/BUeefuWKGh1KJJ8bBsUosB?s=sh&p=a&mlu=0&amv=0" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
-        </a>
-        <a href="https://t.me/CentralBasse" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-        </a>
-    </div>
-
+    <!-- Tarjeta Principal -->
     <div class="card">
-        <div class="logo-box">
-            <div class="circle-icon"></div>
-        </div>
+        <h2 style="margin-bottom: 20px; font-size: 22px;">Portal Oficial</h2>
         
-        <h1>🌎 ¡Hola a todos, bienvenidos a Central Base 🌎</h1>
-        <p class="subtitle">Vota por Central Base y gana 10 WDD, 0.04 WLD, 0.02 USD 🎁🎁</p>
-
-        <a href="https://www.worldrepublic.org/es/govern/parties/4159fef9-6713-4ba6-9596-8b0d74ff4459?ref=3FCER97H" target="_blank" class="btn-vota">
-            👉🗳️ VOTAR 🗳️👈
-        </a>
-
-        <!-- Aviso Actualizado con tu combinación -->
-        <div class="vote-notice">
-            ♾️ <b>¡🌎 Central Base necesita tu voto.</b> Toma 30 segundos y participa por recompensas 🎁🗳️
-        </div>
-
-        <div class="section-title">
-            💳 Billeteras de retiro 💳
-        </div>
-        <div class="wallets-container">
-            <a href="https://www.binance.com/register?ref=CENTRALBASE" target="_blank" class="wallet-item">
-                <img src="https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png" alt="Binance">
-                <span>Binance</span>
-            </a>
-            <div class="wallet-item">
-                <img src="https://assets.coingecko.com/markets/images/23/large/Coinbase_Coin_Primary.png" alt="Coinbase">
-                <span>Coinbase</span>
-            </div>
-            <div class="wallet-item">
-                <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/13502.png" alt="World App">
-                <span>World App</span>
-            </div>
-        </div>
-
-        <div class="dex-box">
-            <div class="token-title">⚡ TOKEN FUTUREX ⚡</div>
-            <div class="dex-header">
-                📊 DEXScreener
-            </div>
-            <p class="dex-desc">Consulta precio, volumen, liquidez y gráficos en tiempo real de FutureX.</p>
-            <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="btn-dex">
-                Ver FutureX en DEXScreener 📈
-            </a>
-        </div>
+        <!-- Botón de Votar y Texto nuevo -->
+        <a href="https://centralbase.org/" target="_blank" class="btn-votar">¡Votar Ahora!</a>
+        <p class="vote-subtitle">🌍 Central Base necesita tu voto. Toma 30 segundos y participa por recompensas 🎁🗳️</p>
     </div>
-
-    <div class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵</div>
-
-    <audio id="bgMusic" loop preload="auto">
-        <source src="music.mp3?v=4" type="audio/mpeg">
-    </audio>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,pt,fr,de,it,ru,zh-CN,ja,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-
-        var music = document.getElementById("bgMusic");
-        var musicBtn = document.getElementById("musicToggle");
-
-        function toggleMusic() {
-            if (music.paused) {
-                music.play().then(function() {
-                    musicBtn.innerHTML = "🔊";
-                }).catch(function(err) {
-                    console.log("Error de audio:", err);
-                });
-            } else {
-                music.pause();
-                musicBtn.innerHTML = "🎵";
-            }
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
