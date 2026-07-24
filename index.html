@@ -13,7 +13,7 @@
         }
 
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), 
+            background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.95)), 
                         url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000&auto=format&fit=crop') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
@@ -27,7 +27,7 @@
         /* Botones Superiores */
         .top-nav {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 25px;
@@ -48,7 +48,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Redes Sociales (Solo WhatsApp y Telegram) */
+        /* Redes Sociales */
         .social-icons {
             display: flex;
             gap: 20px;
@@ -79,25 +79,25 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* Logo Blanco con Círculo Negro */
+        /* Logo Búho Central Base */
         .logo-box {
             width: 100px;
             height: 100px;
-            background-color: #ffffff;
-            border-radius: 12px;
+            background-color: #000000;
+            border: 2px solid #ffffff;
+            border-radius: 16px;
             margin: 0 auto 20px auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
         }
 
-        .circle-icon {
-            width: 50px;
-            height: 50px;
-            border: 10px solid #000000;
-            border-radius: 50%;
-            box-sizing: border-box;
+        .logo-box img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
         }
 
         h1 {
@@ -133,36 +133,92 @@
             transform: scale(0.98);
         }
 
-        /* Sección Billeteras */
-        .wallets-section h3 {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #eeeeee;
+        /* Separadores de Sección */
+        .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
+        /* Billeteras de Retiro */
         .wallets-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin-top: 15px;
+            margin-bottom: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 15px;
         }
 
         .wallet-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .wallet-item img {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            background: #fff;
+            padding: 2px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
         }
 
         .wallet-item span {
-            font-size: 12px;
-            color: #bbbbbb;
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* Sección DEXScreener */
+        .dex-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 20px 15px;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dex-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .dex-header img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .dex-desc {
+            font-size: 13px;
+            color: #cccccc;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .btn-dex {
+            display: block;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
         }
     </style>
 </head>
@@ -170,12 +226,12 @@
 
     <!-- Botones Superiores -->
     <div class="top-nav">
-        <a href="https://t.me/CentralBasse" target="_blank" class="top-btn">🚀 Telegram</a>
-        <a href="https://worldcoin.org" target="_blank" class="top-btn">🌍 World App</a>
-        <a href="https://dexscreener.com" target="_blank" class="top-btn">📈 DEXScreener</a>
+        <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">🚀 FutureX</a>
+        <a href="https://t.me/CentralBasse" target="_blank" class="top-btn">💬 Telegram</a>
+        <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">📈 DEXScreener</a>
     </div>
 
-    <!-- Solo WhatsApp y Telegram -->
+    <!-- Redes Sociales (WhatsApp y Telegram) -->
     <div class="social-icons">
         <a href="https://chat.whatsapp.com/BUeefuWKGh1KJJ8bBsUosB?s=sh&p=a&mlu=0&amv=0" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
@@ -187,37 +243,49 @@
 
     <!-- Tarjeta Principal -->
     <div class="card">
-        <!-- Logo Blanco con Círculo Negro -->
+        <!-- Logo Búho Central Base -->
         <div class="logo-box">
-            <div class="circle-icon"></div>
+            <img src="https://i.ibb.co/6P01x6N/owl-logo.png" alt="Central Base Owl Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3069/3069172.png'">
         </div>
         
         <h1>🌎 ¡Hola a todos, bienvenidos a Central Base 🌎</h1>
         <p class="subtitle">Vota por Central Base y gana 10 WDD, 0.04 WLD, 0.02 USD 🎁🎁</p>
 
-        <!-- TU LINK DE VOTO -->
+        <!-- BOTÓN PRINCIPAL VOTA -->
         <a href="https://www.worldrepublic.org/es/govern/parties/4159fef9-6713-4ba6-9596-8b0d74ff4459?ref=3FCER97H" target="_blank" class="btn-vota">
             👉🗳️ VOTAR AHORA 🗳️👈
         </a>
 
-        <!-- Sección Billeteras (SOLO IMÁGENES / SIN LINK) -->
-        <div class="wallets-section">
-            <h3>💳 Billeteras de retiro 💳</h3>
-            <div class="wallets-container">
-                <div class="wallet-item">
-                    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance">
-                    <span>Binance</span>
-                </div>
-                <div class="wallet-item">
-                    <img src="https://cryptologos.cc/logos/coinbase-coin-base-logo.png" alt="Coinbase">
-                    <span>Coinbase</span>
-                </div>
-                <div class="wallet-item">
-                    <img src="https://images.ctfassets.net/3252v2082sc9/6pW0z9Wq1J7jZgX0N8Xb9k/9f1d063a82e9dbf4803914a8bb3c2b1f/Worldcoin_Logo.png" alt="World App">
-                    <span>World App</span>
-                </div>
+        <!-- Sección Billeteras -->
+        <div class="section-title">
+            💳 Billeteras de retiro 💳
+        </div>
+        <div class="wallets-container">
+            <div class="wallet-item">
+                <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance">
+                <span>Binance</span>
+            </div>
+            <div class="wallet-item">
+                <img src="https://cryptologos.cc/logos/coinbase-coin-base-logo.png" alt="Coinbase">
+                <span>Coinbase</span>
+            </div>
+            <div class="wallet-item">
+                <img src="https://images.ctfassets.net/3252v2082sc9/6pW0z9Wq1J7jZgX0N8Xb9k/9f1d063a82e9dbf4803914a8bb3c2b1f/Worldcoin_Logo.png" alt="World App">
+                <span>World App</span>
             </div>
         </div>
+
+        <!-- Sección DEXScreener con link FutureX -->
+        <div class="dex-box">
+            <div class="dex-header">
+                📊 DEXScreener
+            </div>
+            <p class="dex-desc">Consulta precio, volumen, liquidez y gráficos en tiempo real de FutureX.</p>
+            <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="btn-dex">
+                Ver FutureX en DEXScreener 📈
+            </a>
+        </div>
+
     </div>
 
 </body>
