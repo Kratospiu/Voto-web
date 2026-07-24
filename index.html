@@ -25,6 +25,19 @@
             padding: 20px 15px;
         }
 
+        /* Barra de Idioma */
+        .translate-container {
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 6px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Ocultar barra superior molesta de Google */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+
         /* Botones Superiores */
         .top-nav {
             display: flex;
@@ -235,6 +248,11 @@
 </head>
 <body>
 
+    <!-- Widget Selector de Idiomas de Google -->
+    <div class="translate-container">
+        <div id="google_translate_element"></div>
+    </div>
+
     <!-- Botones Superiores -->
     <div class="top-nav">
         <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">🚀 FutureX</a>
@@ -303,6 +321,14 @@
         </div>
 
     </div>
+
+    <!-- Script oficial de Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,pt,fr,de,it,ru,zh-CN,ja,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
