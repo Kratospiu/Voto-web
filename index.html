@@ -235,6 +235,7 @@
         }
 
         .btn-dex {
+            decrypt: block;
             display: block;
             background: linear-gradient(90deg, #00c6ff, #0072ff);
             color: #ffffff;
@@ -246,7 +247,7 @@
             box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
         }
 
-        /* Botón Flotante de Música */
+        /* Botón Flotante de Música con animación de ondas */
         .music-btn {
             position: fixed;
             bottom: 20px;
@@ -316,7 +317,7 @@
             ♾️ <b>¡Puedes votar las veces que quieras!</b> Solo necesitas un humano y un correo de Gmail distinto por cada voto. 📩✨
         </div>
 
-        <!-- Sección Billeteras Corregidas -->
+        <!-- Sección Billeteras -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
@@ -351,9 +352,9 @@
     <!-- Botón Flotante de Música -->
     <div class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵</div>
 
-    <!-- Audio de Fondo (Puedes cambiar el enlace src por tu mp3 preferido) -->
+    <!-- Música Electrónica / Cyberpunk Moderna de Fondo -->
     <audio id="bgMusic" loop>
-        <audio src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"></audio>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c3686866.mp3?filename=technology-ft-futuristic-electronic-101140.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Scripts -->
