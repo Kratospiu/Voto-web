@@ -190,6 +190,7 @@
             flex-direction: column;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
         }
 
         .wallet-item img {
@@ -217,12 +218,21 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
+        .token-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #00c6ff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .dex-header {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -316,15 +326,15 @@
             ♾️ <b>¡Puedes votar las veces que quieras!</b> Solo necesitas un humano y un correo de Gmail distinto por cada voto. 📩✨
         </div>
 
-        <!-- Sección Billeteras con Logos Garantizados -->
+        <!-- Sección Billeteras -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
         <div class="wallets-container">
-            <div class="wallet-item">
+            <a href="https://www.binance.com/register?ref=CENTRALBASE" target="_blank" class="wallet-item">
                 <img src="https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png" alt="Binance">
                 <span>Binance</span>
-            </div>
+            </a>
             <div class="wallet-item">
                 <img src="https://assets.coingecko.com/markets/images/23/large/Coinbase_Coin_Primary.png" alt="Coinbase">
                 <span>Coinbase</span>
@@ -335,8 +345,9 @@
             </div>
         </div>
 
-        <!-- Sección DEXScreener con link FutureX -->
+        <!-- Sección DEXScreener con Título FutureX Arriba -->
         <div class="dex-box">
+            <div class="token-title">⚡ TOKEN FUTUREX ⚡</div>
             <div class="dex-header">
                 📊 DEXScreener
             </div>
@@ -351,28 +362,29 @@
     <!-- Botón Flotante de Música -->
     <div class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵</div>
 
-    <!-- Elemento de Audio (Cyberpunk / Electrónica) -->
-    <audio id="bgMusic" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c3686866.mp3?filename=technology-ft-futuristic-electronic-101140.mp3" type="audio/mpeg">
+    <!-- Audio Directo Compatible con Móviles -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://actions.google.com/sounds/v1/science_fiction/futuristic_space_ambience.ogg" type="audio/ogg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Scripts -->
     <script type="text/javascript">
-        // Traductor de Google
+        // Traductor
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,pt,fr,de,it,ru,zh-CN,ja,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
 
-        // Control del Reproductor de Música
+        // Control de Música
         var music = document.getElementById("bgMusic");
         var musicBtn = document.getElementById("musicToggle");
 
         function toggleMusic() {
             if (music.paused) {
-                music.play().then(() => {
+                music.play().then(function() {
                     musicBtn.innerHTML = "🔊";
-                }).catch(error => {
-                    console.log("Error al reproducir audio:", error);
+                }).catch(function(err) {
+                    console.log("Error de audio:", err);
                 });
             } else {
                 music.pause();
