@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central Base - Vota y Gana</title>
+    <title>Central Base | Votaciones y Premios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
@@ -32,6 +33,7 @@
             flex-wrap: wrap;
             margin-bottom: 25px;
             width: 100%;
+            max-width: 400px;
         }
 
         .top-btn {
@@ -84,7 +86,7 @@
             width: 100px;
             height: 100px;
             background-color: #ffffff;
-            border-radius: 12px;
+            border-radius: 16px;
             margin: 0 auto 20px auto;
             display: flex;
             justify-content: center;
@@ -133,9 +135,9 @@
             transform: scale(0.98);
         }
 
-        /* Separadores de Sección */
+        /* Títulos de Sección */
         .section-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: bold;
             margin: 25px 0 15px 0;
             color: #ffffff;
@@ -164,10 +166,12 @@
         }
 
         .wallet-item img {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             object-fit: cover;
+            background: #ffffff;
+            padding: 2px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.4);
         }
 
@@ -228,10 +232,10 @@
     <!-- Redes Sociales (WhatsApp y Telegram) -->
     <div class="social-icons">
         <a href="https://chat.whatsapp.com/BUeefuWKGh1KJJ8bBsUosB?s=sh&p=a&mlu=0&amv=0" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+            <img src="https://api.iconify.design/logos:whatsapp-icon.svg" alt="WhatsApp">
         </a>
         <a href="https://t.me/CentralBasse" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+            <img src="https://api.iconify.design/logos:telegram.svg" alt="Telegram">
         </a>
     </div>
 
@@ -250,21 +254,21 @@
             👉🗳️ VOTAR AHORA 🗳️👈
         </a>
 
-        <!-- Sección Billeteras de Retiro con Íconos Personalizados -->
+        <!-- Sección Billeteras con Iconos Estables -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
         <div class="wallets-container">
             <div class="wallet-item">
-                <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance">
+                <img src="https://api.iconify.design/simple-icons:binance.svg?color=%23F0B90B" alt="Binance">
                 <span>Binance</span>
             </div>
             <div class="wallet-item">
-                <img src="https://assets.coingecko.com/coins/images/28003/large/coinbase-icon.png" alt="Coinbase">
+                <img src="https://api.iconify.design/simple-icons:coinbase.svg?color=%230052FF" alt="Coinbase">
                 <span>Coinbase</span>
             </div>
             <div class="wallet-item">
-                <img src="https://images.ctfassets.net/3252v2082sc9/6pW0z9Wq1J7jZgX0N8Xb9k/9f1d063a82e9dbf4803914a8bb3c2b1f/Worldcoin_Logo.png" alt="World App">
+                <img src="https://api.iconify.design/logos:worldcoin-icon.svg" alt="World App">
                 <span>World App</span>
             </div>
         </div>
