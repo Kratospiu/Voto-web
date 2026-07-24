@@ -23,6 +23,7 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px 15px;
+            position: relative;
         }
 
         /* Barra de Idioma */
@@ -34,7 +35,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Ocultar barra superior molesta de Google */
         .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0px !important; }
 
@@ -92,6 +92,7 @@
             max-width: 400px;
             width: 100%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 60px;
         }
 
         /* Logo Blanco con Círculo Negro */
@@ -244,11 +245,36 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
         }
+
+        /* Botón Flotante de Música */
+        .music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            z-index: 1000;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .music-btn:active {
+            transform: scale(0.9);
+        }
     </style>
 </head>
 <body>
 
-    <!-- Widget Selector de Idiomas de Google -->
+    <!-- Widget Selector de Idiomas -->
     <div class="translate-container">
         <div id="google_translate_element"></div>
     </div>
@@ -290,17 +316,17 @@
             ♾️ <b>¡Puedes votar las veces que quieras!</b> Solo necesitas un humano y un correo de Gmail distinto por cada voto. 📩✨
         </div>
 
-        <!-- Sección Billeteras -->
+        <!-- Sección Billeteras Corregidas -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
         <div class="wallets-container">
             <div class="wallet-item">
-                <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="Binance">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Binance_logo.svg" alt="Binance">
                 <span>Binance</span>
             </div>
             <div class="wallet-item">
-                <img src="https://assets.coingecko.com/coins/images/28003/large/coinbase-icon.png" alt="Coinbase">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Coinbase_icon.svg" alt="Coinbase">
                 <span>Coinbase</span>
             </div>
             <div class="wallet-item">
@@ -322,10 +348,33 @@
 
     </div>
 
-    <!-- Script oficial de Google Translate -->
+    <!-- Botón Flotante de Música -->
+    <div class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵</div>
+
+    <!-- Audio de Fondo (Puedes cambiar el enlace src por tu mp3 preferido) -->
+    <audio id="bgMusic" loop>
+        <audio src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"></audio>
+    </audio>
+
+    <!-- Scripts -->
     <script type="text/javascript">
+        // Traductor
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,pt,fr,de,it,ru,zh-CN,ja,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+
+        // Control de Música
+        var music = document.getElementById("bgMusic");
+        var musicBtn = document.getElementById("musicToggle");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicBtn.innerHTML = "🔊";
+            } else {
+                music.pause();
+                musicBtn.innerHTML = "🎵";
+            }
         }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
