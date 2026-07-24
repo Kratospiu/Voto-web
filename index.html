@@ -26,7 +26,6 @@
             position: relative;
         }
 
-        /* Barra de Idioma */
         .translate-container {
             margin-bottom: 15px;
             background: rgba(255, 255, 255, 0.08);
@@ -38,7 +37,6 @@
         .goog-te-banner-frame.skiptranslate { display: none !important; }
         body { top: 0px !important; }
 
-        /* Botones Superiores */
         .top-nav {
             display: flex;
             gap: 10px;
@@ -63,7 +61,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Redes Sociales */
         .social-icons {
             display: flex;
             gap: 20px;
@@ -77,11 +74,6 @@
             transition: transform 0.2s;
         }
 
-        .social-icons a:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Tarjeta Principal */
         .card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -95,7 +87,6 @@
             margin-bottom: 60px;
         }
 
-        /* Logo Blanco con Círculo Negro */
         .logo-box {
             width: 100px;
             height: 100px;
@@ -130,7 +121,6 @@
             line-height: 1.4;
         }
 
-        /* Aviso de Votos Ilimitados */
         .vote-notice {
             background: rgba(0, 180, 216, 0.15);
             border: 1px solid rgba(0, 180, 216, 0.4);
@@ -143,7 +133,6 @@
             font-weight: 500;
         }
 
-        /* Botón Principal Vota */
         .btn-vota {
             display: block;
             background: linear-gradient(90deg, #0072ff, #00c6ff);
@@ -155,14 +144,8 @@
             font-weight: bold;
             box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
             margin-bottom: 20px;
-            transition: transform 0.2s;
         }
 
-        .btn-vota:active {
-            transform: scale(0.98);
-        }
-
-        /* Títulos de Sección */
         .section-title {
             font-size: 16px;
             font-weight: bold;
@@ -174,7 +157,6 @@
             gap: 8px;
         }
 
-        /* Billeteras de Retiro */
         .wallets-container {
             display: flex;
             justify-content: space-around;
@@ -209,7 +191,6 @@
             color: #ffffff;
         }
 
-        /* Sección DEXScreener */
         .dex-box {
             background: rgba(0, 0, 0, 0.4);
             border-radius: 15px;
@@ -256,7 +237,6 @@
             box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
         }
 
-        /* Botón Flotante de Música */
         .music-btn {
             position: fixed;
             bottom: 20px;
@@ -274,29 +254,21 @@
             cursor: pointer;
             z-index: 1000;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            transition: transform 0.2s;
-        }
-
-        .music-btn:active {
-            transform: scale(0.9);
         }
     </style>
 </head>
 <body>
 
-    <!-- Widget Selector de Idiomas -->
     <div class="translate-container">
         <div id="google_translate_element"></div>
     </div>
 
-    <!-- Botones Superiores -->
     <div class="top-nav">
         <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">🚀 FutureX</a>
         <a href="https://t.me/CentralBasse" target="_blank" class="top-btn">💬 Telegram</a>
         <a href="https://dexscreener.com/worldchain/0xd5a3091f593171e3d28fa39083e99aa1d2947d98" target="_blank" class="top-btn">📈 DEXScreener</a>
     </div>
 
-    <!-- Redes Sociales (WhatsApp y Telegram) -->
     <div class="social-icons">
         <a href="https://chat.whatsapp.com/BUeefuWKGh1KJJ8bBsUosB?s=sh&p=a&mlu=0&amv=0" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
@@ -306,9 +278,7 @@
         </a>
     </div>
 
-    <!-- Tarjeta Principal -->
     <div class="card">
-        <!-- Logo Blanco con Círculo Negro -->
         <div class="logo-box">
             <div class="circle-icon"></div>
         </div>
@@ -316,17 +286,14 @@
         <h1>🌎 ¡Hola a todos, bienvenidos a Central Base 🌎</h1>
         <p class="subtitle">Vota por Central Base y gana 10 WDD, 0.04 WLD, 0.02 USD 🎁🎁</p>
 
-        <!-- BOTÓN PRINCIPAL VOTA -->
         <a href="https://www.worldrepublic.org/es/govern/parties/4159fef9-6713-4ba6-9596-8b0d74ff4459?ref=3FCER97H" target="_blank" class="btn-vota">
             👉🗳️ VOTAR AHORA 🗳️👈
         </a>
 
-        <!-- Aviso Informativo de Votos Ilimitados -->
         <div class="vote-notice">
             ♾️ <b>¡Puedes votar las veces que quieras!</b> Solo necesitas un humano y un correo de Gmail distinto por cada voto. 📩✨
         </div>
 
-        <!-- Sección Billeteras -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
@@ -345,7 +312,6 @@
             </div>
         </div>
 
-        <!-- Sección DEXScreener con Título FutureX Arriba -->
         <div class="dex-box">
             <div class="token-title">⚡ TOKEN FUTUREX ⚡</div>
             <div class="dex-header">
@@ -356,25 +322,19 @@
                 Ver FutureX en DEXScreener 📈
             </a>
         </div>
-
     </div>
 
-    <!-- Botón Flotante de Música -->
     <div class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵</div>
 
-    <!-- Audio Vinculado a tu Archivo Subido music.mp3 -->
     <audio id="bgMusic" loop preload="auto">
-        <source src="music.mp3?v=2" type="audio/mpeg">
+        <source src="music.mp3?v=3" type="audio/mpeg">
     </audio>
 
-    <!-- Scripts -->
     <script type="text/javascript">
-        // Traductor
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,pt,fr,de,it,ru,zh-CN,ja,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
 
-        // Control de Música
         var music = document.getElementById("bgMusic");
         var musicBtn = document.getElementById("musicToggle");
 
