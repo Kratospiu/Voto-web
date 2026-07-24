@@ -11,11 +11,8 @@
     <!-- FUENTE INTER DESDE GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- HOJA DE ESTILOS CSS EXTENDIDA Y OPTIMIZADA -->
+    <!-- HOJA DE ESTILOS CSS EXTENDIDA -->
     <style>
-        /* ==========================================
-           1. CONFIGURACIÓN GENERAL Y RESET
-           ========================================== */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -38,9 +35,7 @@
             overflow-x: hidden;
         }
 
-        /* ==========================================
-           2. ESTILOS DEL TRADUCTOR DE GOOGLE
-           ========================================== */
+        /* TRADUCTOR DE GOOGLE */
         .translate-wrapper {
             width: 100%;
             max-width: 420px;
@@ -66,15 +61,13 @@
             top: 0px !important; 
         }
 
-        /* ==========================================
-           3. BARRA DE NAVEGACIÓN SUPERIOR
-           ========================================== */
+        /* BARRA DE NAVEGACIÓN SUPERIOR */
         .top-nav {
             display: flex;
             gap: 12px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             width: 100%;
             max-width: 420px;
         }
@@ -97,12 +90,9 @@
         .top-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 180, 216, 0.5);
-            background: linear-gradient(135deg, #0096c7, #005f73);
         }
 
-        /* ==========================================
-           4. TARJETA PRINCIPAL DEL PORTAL
-           ========================================== */
+        /* TARJETA PRINCIPAL */
         .card {
             background: rgba(255, 255, 255, 0.04);
             backdrop-filter: blur(15px);
@@ -115,7 +105,6 @@
             width: 100%;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             margin-bottom: 40px;
-            position: relative;
         }
 
         .logo-box {
@@ -141,9 +130,7 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
-        /* ==========================================
-           5. BOTÓN DE VOTACIÓN Y TEXTO FACEBOOK
-           ========================================== */
+        /* BOTÓN DE VOTAR Y TEXTO */
         .btn-votar {
             display: block;
             width: 100%;
@@ -154,10 +141,9 @@
             text-decoration: none;
             font-size: 19px;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             box-shadow: 0 6px 20px rgba(0, 180, 216, 0.4);
             transition: all 0.2s ease;
-            letter-spacing: 0.3px;
         }
 
         .btn-votar:hover {
@@ -165,23 +151,17 @@
             box-shadow: 0 8px 25px rgba(0, 180, 216, 0.6);
         }
 
-        .btn-votar:active {
-            transform: scale(0.98);
-        }
-
         .vote-subtitle {
             font-size: 14px;
             color: #e2e8f0;
             line-height: 1.6;
-            margin-top: 12px;
-            margin-bottom: 24px;
+            margin-top: 8px;
+            margin-bottom: 20px;
             font-weight: 400;
             padding: 0 5px;
         }
 
-        /* ==========================================
-           6. REPRODUCTOR DE AUDIO PERSONALIZADO
-           ========================================== */
+        /* REPRODUCTOR DE AUDIO */
         .audio-section-wrapper {
             margin-top: 20px;
             margin-bottom: 25px;
@@ -200,66 +180,79 @@
             text-transform: uppercase;
         }
 
-        .audio-player-container {
-            width: 100%;
-        }
-
         audio {
             width: 100%;
             height: 38px;
             border-radius: 8px;
         }
 
-        /* ==========================================
-           7. SECCIÓN DE BILLETERAS Y RETIROS
-           ========================================== */
+        /* SECCIÓN DE BILLETERAS / RETIROS Y FUTUREX */
         .wallet-footer-section {
             margin-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
         }
 
+        .info-ecosystem {
+            font-size: 13px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
         .wallet-grid {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
         }
 
         .wallet-item {
-            font-size: 13px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 8px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
             color: #cbd5e1;
             font-weight: 500;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 6px 12px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.2s;
         }
 
-        /* ==========================================
-           8. DISEÑO RESPONSIVO Y EXTRAS
-           ========================================== */
+        .wallet-item span.icon {
+            font-size: 18px;
+        }
+
+        .wallet-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* PIE DE PÁGINA / INFO ADICIONAL */
+        .footer-note {
+            margin-top: 25px;
+            font-size: 11px;
+            color: #64748b;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+
         @media (max-width: 480px) {
-            body {
-                padding: 15px 10px;
-            }
-            .card {
-                padding: 22px 16px;
-            }
-            .portal-title {
-                font-size: 22px;
-            }
+            body { padding: 15px 10px; }
+            .card { padding: 22px 16px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- BLOQUE 1: CONTENEDOR DEL TRADUCTOR DE GOOGLE -->
+    <!-- TRADUCTOR DE GOOGLE SUPERIOR -->
     <div class="translate-wrapper">
         <div class="translate-container" id="google_translate_element"></div>
     </div>
 
-    <!-- BLOQUE 2: BARRA DE NAVEGACIÓN SUPERIOR (REDES) -->
+    <!-- NAVEGACIÓN SUPERIOR: TELEGRAM Y DEXSCREENER -->
     <div class="top-nav">
         <a href="https://t.me" target="_blank" class="top-btn">
             <span>📢</span> Telegram
@@ -269,24 +262,24 @@
         </a>
     </div>
 
-    <!-- BLOQUE 3: TARJETA PRINCIPAL DE LA APLICACIÓN -->
+    <!-- TARJETA CENTRAL DE LA APLICACIÓN -->
     <div class="card">
         
-        <!-- Logo o Icono Central -->
+        <!-- LOGOTIPO O ICONO GLOBAL -->
         <div class="logo-box">
             <span>🌍</span>
         </div>
 
-        <!-- Título Institucional -->
+        <!-- TÍTULO PRINCIPAL -->
         <h2 class="portal-title">Central Base</h2>
         
-        <!-- Botón Principal de Acción -->
+        <!-- BOTÓN DE ACCIÓN: VOTAR -->
         <a href="https://centralbase.org/" target="_blank" class="btn-votar">¡Votar Ahora!</a>
         
-        <!-- Subtítulo optimizado para revisión de Facebook -->
+        <!-- TEXTO OPTIMIZADO PARA FACEBOOK -->
         <p class="vote-subtitle">🌍 Central Base necesita tu voto. Toma 30 segundos y participa por recompensas 🎁🗳️</p>
 
-        <!-- BLOQUE 4: REPRODUCTOR DE AUDIO INTEGRADO -->
+        <!-- REPRODUCTOR DE AUDIO PERSONALIZADO -->
         <div class="audio-section-wrapper">
             <div class="audio-label">🎵 Pista Musical Oficial</div>
             <div class="audio-player-container">
@@ -297,20 +290,34 @@
             </div>
         </div>
 
-        <!-- BLOQUE 5: BILLETERAS Y MÉTODOS DE RETIRO COMPATIBLES -->
+        <!-- BILLETERAS Y MONITOREO DEL ECOSISTEMA (FUTUREX) -->
         <div class="wallet-footer-section">
+            <div class="info-ecosystem">🚀 Ecosistema FutureX & Retiros</div>
             <div class="wallet-grid">
-                <span class="wallet-item">💎 Binance</span>
-                <span class="wallet-item">🪙 Coinbase</span>
-                <span class="wallet-item">🌐 World App</span>
+                <div class="wallet-item">
+                    <span class="icon">💎</span>
+                    <span>Binance</span>
+                </div>
+                <div class="wallet-item">
+                    <span class="icon">🪙</span>
+                    <span>Coinbase</span>
+                </div>
+                <div class="wallet-item">
+                    <span class="icon">🌐</span>
+                    <span>World App</span>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <!-- BLOQUE 6: SCRIPTS JAVASCRIPT Y CONFIGURACIONES FINALES -->
+    <!-- NOTA DE PIE INSTITUCIONAL -->
+    <div class="footer-note">
+        Central Base Community Ecosystem © 2026. Todos los derechos reservados.
+    </div>
+
+    <!-- SCRIPTS DE TRADUCCIÓN AUTOMÁTICA -->
     <script type="text/javascript">
-        // Inicialización del script de traducción automática global
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'es', 
