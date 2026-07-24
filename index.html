@@ -235,7 +235,6 @@
         }
 
         .btn-dex {
-            decrypt: block;
             display: block;
             background: linear-gradient(90deg, #00c6ff, #0072ff);
             color: #ffffff;
@@ -247,7 +246,7 @@
             box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
         }
 
-        /* Botón Flotante de Música con animación de ondas */
+        /* Botón Flotante de Música */
         .music-btn {
             position: fixed;
             bottom: 20px;
@@ -317,17 +316,17 @@
             ♾️ <b>¡Puedes votar las veces que quieras!</b> Solo necesitas un humano y un correo de Gmail distinto por cada voto. 📩✨
         </div>
 
-        <!-- Sección Billeteras -->
+        <!-- Sección Billeteras con Logos Garantizados -->
         <div class="section-title">
             💳 Billeteras de retiro 💳
         </div>
         <div class="wallets-container">
             <div class="wallet-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Binance_logo.svg" alt="Binance">
+                <img src="https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png" alt="Binance">
                 <span>Binance</span>
             </div>
             <div class="wallet-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Coinbase_icon.svg" alt="Coinbase">
+                <img src="https://assets.coingecko.com/markets/images/23/large/Coinbase_Coin_Primary.png" alt="Coinbase">
                 <span>Coinbase</span>
             </div>
             <div class="wallet-item">
@@ -352,26 +351,29 @@
     <!-- Botón Flotante de Música -->
     <div class="music-btn" id="musicToggle" onclick="toggleMusic()">🎵</div>
 
-    <!-- Música Electrónica / Cyberpunk Moderna de Fondo -->
+    <!-- Elemento de Audio (Cyberpunk / Electrónica) -->
     <audio id="bgMusic" loop>
         <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c3686866.mp3?filename=technology-ft-futuristic-electronic-101140.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Scripts -->
     <script type="text/javascript">
-        // Traductor
+        // Traductor de Google
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,pt,fr,de,it,ru,zh-CN,ja,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
 
-        // Control de Música
+        // Control del Reproductor de Música
         var music = document.getElementById("bgMusic");
         var musicBtn = document.getElementById("musicToggle");
 
         function toggleMusic() {
             if (music.paused) {
-                music.play();
-                musicBtn.innerHTML = "🔊";
+                music.play().then(() => {
+                    musicBtn.innerHTML = "🔊";
+                }).catch(error => {
+                    console.log("Error al reproducir audio:", error);
+                });
             } else {
                 music.pause();
                 musicBtn.innerHTML = "🎵";
